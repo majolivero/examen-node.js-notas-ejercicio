@@ -130,3 +130,55 @@ project-name/
 ├── tsconfig.json
 └── nodemon.json
 
+
+CODIGOS DE ESTADO
+Los códigos de estado de respuesta HTTP son importantes para entender cómo los servidores web responden a las solicitudes realizadas por los clientes (como navegadores web). Estos códigos están divididos en cinco categorías principales, cada una representada por el primer dígito del código. Aquí tienes una lista de los códigos de estado más comunes para los diferentes verbos HTTP:
+
+1xx: Informativos
+100 Continue: El cliente debe continuar con la solicitud.
+101 Switching Protocols: El servidor acepta cambiar el protocolo de comunicación.
+2xx: Éxito
+200 OK: La solicitud ha tenido éxito. Común para GET, POST, PUT, DELETE.
+201 Created: La solicitud ha tenido éxito y se ha creado un nuevo recurso. Común para POST y PUT.
+202 Accepted: La solicitud ha sido aceptada para procesamiento, pero no se ha completado. Común para POST, PUT, DELETE.
+204 No Content: La solicitud ha tenido éxito pero no devuelve contenido. Común para DELETE.
+3xx: Redirección
+301 Moved Permanently: El recurso solicitado ha sido movido permanentemente a una nueva URL.
+302 Found: El recurso solicitado reside temporalmente en una URL diferente.
+304 Not Modified: No hay contenido nuevo para devolver, se puede usar la versión en caché del recurso.
+4xx: Error del Cliente
+400 Bad Request: La solicitud no puede ser procesada debido a un error del cliente (p. ej., sintaxis incorrecta).
+401 Unauthorized: La solicitud requiere autenticación. Común para cualquier verbo HTTP si se necesita autenticación.
+403 Forbidden: El servidor entiende la solicitud, pero se niega a autorizarla.
+404 Not Found: El servidor no puede encontrar el recurso solicitado. Común para GET.
+405 Method Not Allowed: El método especificado en la solicitud no está permitido para el recurso.
+409 Conflict: La solicitud no puede ser completada debido a un conflicto con el estado actual del recurso. Común para PUT.
+422 Unprocessable Entity: La solicitud está bien formada, pero no se puede procesar debido a errores semánticos.
+5xx: Error del Servidor
+500 Internal Server Error: El servidor ha encontrado una situación que no sabe cómo manejar.
+501 Not Implemented: El servidor no reconoce el método de solicitud o no tiene capacidad para cumplirlo.
+502 Bad Gateway: El servidor recibió una respuesta inválida de un servidor de respaldo.
+503 Service Unavailable: El servidor no está disponible temporalmente, generalmente debido a mantenimiento o sobrecarga.
+504 Gateway Timeout: El servidor no recibió una respuesta a tiempo de un servidor de respaldo.
+Ejemplos de Uso con Verbos HTTP
+GET /recurso
+
+200 OK: El recurso se ha recuperado con éxito.
+404 Not Found: El recurso no existe.
+304 Not Modified: No hay cambios en el recurso.
+POST /recurso
+
+201 Created: El recurso se ha creado con éxito.
+400 Bad Request: Los datos enviados son incorrectos.
+409 Conflict: El recurso ya existe.
+PUT /recurso
+
+200 OK: El recurso se ha actualizado con éxito.
+201 Created: El recurso no existía y se ha creado.
+400 Bad Request: Los datos enviados son incorrectos.
+404 Not Found: El recurso a actualizar no existe.
+DELETE /recurso
+
+200 OK: El recurso se ha eliminado con éxito.
+204 No Content: El recurso se ha eliminado con éxito, sin contenido adicional.
+404 Not Found: El recurso no existe.

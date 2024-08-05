@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { container } from "tsyringe"; //Importación del contenedor de inyección de dpendencias de tsyringe
+import { container } from "tsyringe"; //Importación del contenedor de inyección de dependencias de tsyringe
 import UserService from "../services/userService"; //Aquí se importa el servicio UserService desde el archivo UserService ubicado en el directorio services. Este servicio contiene la lógica de negocio relacionada con los usuarios. 
 
 export default class UserController {  //Esta clase contiene métodos estáticos que actúan como controladores para las rutas relacionadas con los usuarios
