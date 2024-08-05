@@ -38,7 +38,7 @@ Con Esto se crean las carpetas node_modules y package-lock.json
 (npm install typescript @types/node --save-dev)
 
 *inicializar typescript:
-(npx tsc --init)
+(npx tsc --init) Se crea el archivo tsconfig.json
 
 *sequelize-typescript: Decoradores de TypeScript para Sequelize. Nos permite: 
 (npm install sequelize sequelize-typescript reflect-metadata)
